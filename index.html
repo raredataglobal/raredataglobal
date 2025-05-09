@@ -1,0 +1,88 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rare Data Global</title>
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <style>
+    body {
+      margin: 0;
+      background: #000;
+      color: #fff;
+      font-family: 'Arial', sans-serif;
+      text-align: center;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      opacity: 0;
+      animation: fadeIn 2s ease-out forwards;
+    }
+
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+      }
+    }
+
+    .logo {
+      max-width: 300px;
+      width: 80%;
+    }
+
+    .links {
+      margin-top: 100vh;
+      padding: 2rem;
+      opacity: 0;
+      transform: translateY(40px);
+      transition: opacity 1s ease-out, transform 1s ease-out;
+    }
+
+    .links.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .links a {
+      display: block;
+      color: #0ff;
+      text-decoration: none;
+      font-size: 1.5rem;
+      margin: 1rem 0;
+      transition: color 0.3s;
+    }
+
+    .links a:hover {
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img src="RDG HD.png" alt="Rare Data Global Logo" class="logo" />
+  </div>
+  <div class="links" id="fade-links">
+    <a href="https://t.me/raredataglobal" target="_blank">Telegram</a>
+    <a href="https://www.youtube.com/@RareDataGlobal" target="_blank">YouTube</a>
+    <a href="mailto:raredataglobal@gmail.com">Email</a>
+  </div>
+
+  <script>
+    // Scroll-triggered animation
+    const links = document.getElementById('fade-links');
+    window.addEventListener('scroll', () => {
+      const triggerBottom = window.innerHeight * 0.9;
+      const linksTop = links.getBoundingClientRect().top;
+      if (linksTop < triggerBottom) {
+        links.classList.add('visible');
+      }
+    });
+  </script>
+</body>
+</html>
