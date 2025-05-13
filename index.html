@@ -6,13 +6,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Rare Data Global</title>
   <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
       background: #000;
       color: #fff;
-      font-family: 'Arial', sans-serif;
+      font-family: 'Orbitron', sans-serif;
       text-align: center;
+      letter-spacing: 0.15em;
     }
 
     .container {
@@ -22,26 +24,28 @@
       justify-content: center;
       height: 100vh;
       opacity: 0;
-      animation: fadeIn 2s ease-out forwards;
+      transform: scale(0.95);
+      animation: fadeZoomIn 3s ease-out forwards;
     }
 
-    @keyframes fadeIn {
+    @keyframes fadeZoomIn {
       to {
         opacity: 1;
+        transform: scale(1);
       }
     }
 
     .logo {
-      max-width: 300px;
-      width: 80%;
+      max-width: 360px;
+      width: 90%;
     }
 
     .links {
       margin-top: 100vh;
-      padding: 2rem;
+      padding: 3rem;
       opacity: 0;
-      transform: translateY(40px);
-      transition: opacity 1s ease-out, transform 1s ease-out;
+      transform: translateY(60px);
+      transition: opacity 2s ease-out, transform 2s ease-out;
     }
 
     .links.visible {
@@ -51,10 +55,10 @@
 
     .links a {
       display: block;
-      color: #0ff;
+      color: #b300ff;
       text-decoration: none;
-      font-size: 1.5rem;
-      margin: 1rem 0;
+      font-size: 2rem;
+      margin: 1.5rem 0;
       transition: color 0.3s;
     }
 
@@ -68,9 +72,9 @@
     <img src="RDG HD.png" alt="Rare Data Global Logo" class="logo" />
   </div>
   <div class="links" id="fade-links">
-    <a href="https://t.me/raredataglobal" target="_blank">Telegram</a>
-    <a href="https://www.youtube.com/@RareDataGlobal" target="_blank">YouTube</a>
-    <a href="mailto:raredataglobal@gmail.com">Email</a>
+    <a href="https://t.me/raredataglobal" target="_blank">TELEGRAM</a>
+    <a href="https://www.youtube.com/@RareDataGlobal" target="_blank">YOUTUBE</a>
+    <a href="mailto:raredataglobal@gmail.com">EMAIL</a>
   </div>
 
   <script>
